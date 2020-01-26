@@ -31,10 +31,20 @@ public class DFS_TargetNumber_43165 {
 			
 	}
 
-	public static int solution(int[] numbers, int target) {
+	public static int solution(int now, int end, int[] numbers, int target) {
 		int answer = 0;
 		
 		int size = numbers.length;
+		
+		target = 3;
+		
+		// now?? end?? n 번째 연산자?
+		// 현재 채우고 있는 연산자 순서가 now, 마지막 연산자 순서가 end
+		// now가 end까지 가면 함수를 종료.
+		
+		for(int i=0; i<size; i++) {
+			numbers[i] +
+		}
 		
 		return answer;
 	}
