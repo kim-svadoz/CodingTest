@@ -21,32 +21,28 @@
  */
 package programmers;
 
-import java.util.LinkedList;
-
 public class DFS_TargetNumber_43165 {
 	public static void main(String[] args) {
 		int[] numbers= {1,1,1,1,1};
-		
-		solution(numbers, 3);
+		int end = numbers.length;
+		dfs(0, end, numbers, 0, 3);
 			
 	}
 
-	public static int solution(int now, int end, int[] numbers, int target) {
-		int answer = 0;
-		
-		int size = numbers.length;
-		
-		target = 3;
-		
+	public static int dfs(int now, int end, int[] numbers, int num, int target) {
+		if(now == end) {
+			if(num==target) {
+				return 1;
+			}else {
+				return 0;
+			}
+		}
+		return dfs(now+1, end, numbers, num+numbers[now], target) + 
+				dfs(now+1, end, numbers, num-numbers[now], target);
 		// now?? end?? n 번째 연산자?
 		// 현재 채우고 있는 연산자 순서가 now, 마지막 연산자 순서가 end
 		// now가 end까지 가면 함수를 종료.
 		
-		for(int i=0; i<size; i++) {
-			numbers[i] +
-		}
-		
-		return answer;
 	}
 }
 
